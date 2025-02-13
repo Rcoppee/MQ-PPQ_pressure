@@ -11,26 +11,25 @@ This repository includes the scripts developed for the study: "Tolerance of <i>P
 Once the reads were mapped to the reference genome, we used the following commands to produce pileup files (one specifically for SNPs, one specifically for indels):
 
 ```
-#for SNPs
-XXX
-#for indels
-XXX
+#for SNPs, example for sample F75
+samtools mpileup -a -A -x -B --no-output-ins --no-output-del -p Pfalciparum.genome.fasta F75.sorted.bam -o F75-all.pileup
+#for indels, remove --no-output-ins and --no-output-del parameters
 ```
 
 # Counting the A, T, G, C, insertions and deletions along the genome
 We then used python scripts to count the different nucleotides, insertions and deletions along the genome:
 
 ```
-#for SNPs
-XXX
+#for SNPs (change the file name in the script)
+python3 pileup_to_count_bases.py
 #for indels
-XXX
+python3 pileup_to_count_indels.py
 ```
 
 # Comparison of the two genomes
-We finally developped two R scripts to search for mutations (SNPs, indels) in the paired samples. Some filtration steps are included to remove false positive variants, and not consider variants that could be present at minor proportions in one sample and at major proportions in the other one. The script must be executed in Rstudio.
+We finally developped two R scripts to search for mutations (SNPs or indels) in the paired samples. Some filtration steps are included to remove false positive variants, and not consider variants that could be present at minor proportions in one sample and at major proportions in the other one. The script must be executed in Rstudio.
 
 # Citation
-**XXX**
+**to do**
 
-Camille Roesh, Romain Coppée, etc.
+Camille Roesh, Romain Coppée, TO COMPLETE etc.
