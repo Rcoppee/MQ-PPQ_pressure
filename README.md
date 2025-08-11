@@ -12,7 +12,7 @@ Once the reads were mapped to the reference genome, we used the following comman
 
 ```
 ##for SNPs, example for sample F75
-samtools mpileup -a -A -x -B --no-output-ins --no-output-del -p Pfalciparum.genome.fasta F75.sorted.bam -o F75-all.pileup
+samtools mpileup -a -A -x -B --no-output-ins --no-output-del -f Pfalciparum.genome.fasta F75.sorted.bam -o F75-all.pileup
 ##for indels, remove --no-output-ins and --no-output-del parameters
 ```
 
